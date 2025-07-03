@@ -7,7 +7,7 @@ class Task:
         self.category = category
         self.priority = priority
         self.completed = completed
-
+    #dict for saving
     def to_dict(self):
         return {
             "task_id": self.task_id,
@@ -18,7 +18,7 @@ class Task:
             "priority": self.priority,
             "completed": self.completed
         }
-    #Dict Format (read ".json")
+    #Dict for reading
     @staticmethod
     def from_dict(data):
         return Task(
@@ -30,3 +30,4 @@ class Task:
             priority=data["priority"],
             completed=data.get("completed", False)
         )
+
